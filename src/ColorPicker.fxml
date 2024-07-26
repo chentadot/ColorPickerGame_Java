@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ColorPickerController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startStopBtn" mnemonicParsing="false" onAction="#startStopPressed" text="Start" />
+            <Button fx:id="minusTimer" mnemonicParsing="false" onAction="#decreaseTimePressed" text="-">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="plusTimer" mnemonicParsing="false" onAction="#increaseTimePressed" text="+" />
+            <Label text="Time:">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="timeLabel" text="Label" />
+            <Button fx:id="minusNumber" mnemonicParsing="false" onAction="#reduceColorsPressed" text="-">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="plusNumber" mnemonicParsing="false" onAction="#increaseColorsPressed" text="+" />
+            <Label text="Number of color buttons:" />
+            <Label fx:id="numOfColorsLabel" text="Label" />
+            <ComboBox fx:id="diffiucltyCBox" prefHeight="25.0" prefWidth="134.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Score:" />
+            <Label fx:id="scoreLabel" text="Label" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="colorLabel" text="Label">
+               <font>
+                  <Font size="96.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane fx:id="buttonGrid" hgap="10.0" maxWidth="1.7976931348623157E308">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
